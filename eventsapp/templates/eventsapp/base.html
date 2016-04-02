@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html id="Tukio" lang="en-us">
+<html id="Tukio_base" lang="en-us">
 <head>
 <meta charset="UTF-8" />
 <meta name="description" content="Crowd-sourced club event schedule" />
@@ -8,7 +8,7 @@
 <meta http-equiv="X-Frame-Options" content="allow">
 
 <title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" type="text/css" href="Tukio.css">
+<link rel="stylesheet" type="text/scss" href="Tukio.css">
 <script src="Tukio.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <!-- - See more at: http://www.digital-lifestyle.com/2014/03/embedding-google-maps-with-traffic.html#sthash.Y1qIFrVr.dpuf -->
@@ -18,8 +18,15 @@
 		<image id="logo">
 			
 		</image>
-		<a href="day">Day</a>
-		<a href="week">Week</a>
+		<ul id="day_week_toggle">
+			<li><a href="/calendar/day">Day</a></li>
+			<li> Week
+				<ul id="week_dropdown">
+					<li><a href="/calendar/week">Week Schedule</a></li>
+					<li><a href="/calendar/list">Event List</a></li>
+				</ul>
+			</li>
+		</ul>
 		{% if request.user.is_authenticated %}
  			<a href="/accounts/logout">Logout</a>
 		{% else %}
