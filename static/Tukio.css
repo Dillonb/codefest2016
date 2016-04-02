@@ -9,6 +9,8 @@
   width: 100%;
   margin-bottom: 120px;
   color: white; }
+  #Tukio_base nav a {
+    color: white; }
   #Tukio_base nav li:hover {
     opacity: 0.5; }
   #Tukio_base nav #week:hover {
@@ -62,7 +64,6 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  color: white;
   text-decoration: none; }
 #Tukio_base #dayView span.time {
   text-size: 16pt; }
@@ -81,5 +82,40 @@ footer {
   bottom: 0;
   left: 0;
   text-align: center; }
+
+#weekView ul {
+  list-style-type: none; }
+#weekView p.weekday {
+  font-size: 25pt;
+  font-weight: bold; }
+#weekView li {
+  display: block; }
+  #weekView li p, #weekView li div, #weekView li h3 {
+    display: inline-block; }
+  #weekView li p.datetime {
+    position: relative;
+    top: -40px;
+    font-size: 18pt;
+    padding-right: 10px; }
+  #weekView li div.namedesc {
+    display: inline-block;
+    width: 80%;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 5px; }
+    #weekView li div.namedesc p {
+      display: block;
+      margin-left: 40px;
+      font-size: 15pt; }
+    #weekView li div.namedesc p.sponsor {
+      text-align: right;
+      margin-bottom: 0px; }
+    #weekView li div.namedesc h3 {
+      margin: 0px; }
+  #weekView li div.namedesc.club {
+    background-color: #00A492; }
+  #weekView li div.namedesc.individual {
+    background-color: #2DCF38; }
 
 /*# sourceMappingURL=Tukio.css.map */
