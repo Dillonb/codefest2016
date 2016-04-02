@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'codefest2016'
+    'eventsapp'
 ]
 
 MIDDLEWARE_CLASSES = [
