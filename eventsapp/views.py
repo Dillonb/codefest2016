@@ -60,7 +60,7 @@ def week_view(request):
             'day': day,
             'events': Event.objects.filter(date_time__year=day.year,
                                               date_time__month=day.month,
-                                              date_time__day=day.day)
+                                              date_time__day=day.day).order_by("date_time")
         })
 
     return render(request, "eventsapp/week.html", {"days": days})
@@ -71,7 +71,7 @@ def logout_view(request):
 
 def calendar_list_view(request):
     return render(request, "eventsapp/list.html", {
-        "events": Event.objects.all()
+        "events": Event.objects.all().order_by("date_time")
     })
 
 @login_required
