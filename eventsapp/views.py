@@ -20,13 +20,11 @@ def profile_view(request):
 
     return render(request, "eventsapp/profile.html", {"user": user})
 
-@login_required
 def club_view(request, clubid):
     club = get_object_or_404(Club, id=clubid)
     print(club.event_set.all())
     return render(request, "eventsapp/club.html", {"club":club, "events": club.event_set.all()})
 
-@login_required
 def club_list_view(request):
     return render(request, "eventsapp/club_list.html", {"clubs": Club.objects.all()})
 
