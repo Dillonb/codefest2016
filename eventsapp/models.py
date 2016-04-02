@@ -64,5 +64,5 @@ class Event(models.Model):
     user_type = models.CharField(max_length=1,choices=USER_TYPES)
     date_time = models.DateTimeField(null=True)
     description = models.CharField(max_length=255)
-    club = models.ForeignKey("Club")
+    club = models.ForeignKey("Club", null=True)
     user = models.ForeignKey("UVMUser", null=True)
