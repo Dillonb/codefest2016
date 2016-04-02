@@ -4,19 +4,37 @@
 		flex-direction: row;
 		justify-content: space-around;
 		height: 100px;
+		margin-top: 50px;
 		align-items: center;
+		#logo {
+			width: 300px;
+			margin-left: -30px;
+		}
+		#logout{
+			width: 180px;
+			font-size: 20pt;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			background-color: #03B9B9; 
+			text-align: center;
+		}
+		#login{
+			width: 180px;
+			font-size: 20pt;	
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			background-color: #03B9B9; 
+			text-align: center;
+		}
 	}
 	#day_week_toggle li {
 		font-size: 20pt;
-		width: 200px;
+		width: 180px;
 		background-color: #03B9B9; 
 		display: inline-block;
 		text-align: center;
-		margin-left: 0;
-		margin-right: 0;
 		#week_dropdown {
 			display:none;
-			min-width: 50px;
     		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     		z-index: 1;
 		}
@@ -37,7 +55,7 @@
 			justify-content: left;
 			margin-left: 0;
 			padding-left: 0;
-			width: 190px;
+			width: 170px;
 			li {
 				border: 1px solid black;
 				border-radius: 0px;
@@ -47,18 +65,14 @@
 		}
 	}
 
-	nav #login{
-		width: 180px;
-		font-size: 20pt;
-		border-radius: 10px;
-		background-color: #03B9B9; 
-		text-align: center;
-	}
-
 	a {
 		color: black;
 		text-decoration: none;
 	}
-
-#list_view {
+}
+#dayView {
+	span.time {
+		text-size: 16pt;
+		font-family: 
+	}
 }
