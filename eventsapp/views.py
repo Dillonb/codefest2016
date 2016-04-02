@@ -56,7 +56,8 @@ def day_view(request):
                                         date_time__month = today.month,
                                         date_time__year = today.year)
 
-	return render(request, "eventsapp/day.html", {"events":events})
+	return render(request, "eventsapp/week.html", {"days": [{'day':"Today", 'events':events}]})
+
 
 def week_view(request):
     today = datetime.datetime.now().date()
