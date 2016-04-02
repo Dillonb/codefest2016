@@ -52,6 +52,7 @@ def submit_event_view(request):
         e.description = form.cleaned_data['description']
         e.name = form.cleaned_data['name']
         e.user = request.user
+        e.date_time = form.cleaned_data['date']
         e.save()
         return redirect("/calendar/list")
-    return render(request, "eventsapp/submit.html", {"form": form})
+    return render(request, "eventsapp/submit.html", {"form": EventForm()})
