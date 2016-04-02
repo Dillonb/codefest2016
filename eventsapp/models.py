@@ -46,7 +46,6 @@ class Comment(models.Model):
 class Club(models.Model):
         users = models.ManyToManyField("UVMUser")
         name = models.CharField(max_length=100)
-        events = models.ForeignKey("Event")
 
 class Event(models.Model):
 	"""A custom event model to represent events around UVM Campus"""
