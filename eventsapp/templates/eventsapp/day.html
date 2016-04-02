@@ -11,7 +11,7 @@
 				<h3> {{ event.name }} </h3>
 				<p> {{ event.description }} </p>
 				<p> {% if event.club %}
-						Sponsored by: {{ event.club }}
+						Sponsored by: <a href="/clubs/{{event.club.id}}">{{ event.club.name }}</a>
 					{% else %}
 						An individual: {{ event.user.full_name }}
 					{% endif %} 
