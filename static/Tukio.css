@@ -119,8 +119,8 @@ ul.club_list {
   margin-left: 40px;
   padding-top: 15px; }
   #clubsView li {
-    margin-right: 50px;
-    background-color: #2DCF38;
+    width: 80%;
+    background-color: #00A492;
     border-radius: 5px;
     padding: 1em; }
 
