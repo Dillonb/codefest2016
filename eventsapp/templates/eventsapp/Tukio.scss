@@ -1,0 +1,22 @@
+#Tukio_base {
+	#day_week_toggle li {
+		heigh: 50px;
+		width: 50px;
+		font-weight: 30pt;
+		background-color: #03B9B9; 
+		display: inline-block;
+		#week_dropdown {
+			display:none;
+			min-width: 50px;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    		z-index: 1;
+		}
+	}
+	#day_week_toggle li:nth-child(2):hover {
+		#week_dropdown{
+			display: inline-block;
+			border: 1px solid black;
+			position: absolute;
+		}
+	}
+}
