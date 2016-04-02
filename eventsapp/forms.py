@@ -7,6 +7,7 @@ def get_event_form(clubs, data=None):
         name = forms.CharField(required=True)
         description = forms.CharField(required=True)
         date = forms.DateTimeField(initial=datetime.datetime.now(), widget=forms.DateTimeInput(), required=True)
+        location = forms.CharField(required=True)
         club = forms.ModelChoiceField(required=False, queryset=clubs)
 
         class Meta:

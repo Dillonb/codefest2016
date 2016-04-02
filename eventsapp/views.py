@@ -92,6 +92,7 @@ def submit_event_view(request):
         e = Event()
         e.description = form.cleaned_data['description']
         e.name = form.cleaned_data['name']
+        e.location = form.cleaned_data['location']
         e.date_time = form.cleaned_data['date']
         if form.cleaned_data['club']:
             e.club = form.cleaned_data['club']
