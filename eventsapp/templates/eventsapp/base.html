@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html id="Tukio" lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+<meta charset="UTF-8" />
+<meta name="description" content="Crowd-sourced club event schedule" />
+<meta name="author" content="Collin, Dillion, Micheal, Brian, Jared, Dan, and Noah" />
+<meta name="copyright" content="&copy;" />
+<meta http-equiv="X-Frame-Options" content="allow">
+
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="Tukio.css">
+<script src="Tukio.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<!-- - See more at: http://www.digital-lifestyle.com/2014/03/embedding-google-maps-with-traffic.html#sthash.Y1qIFrVr.dpuf -->
 </head>
 <body>
+	<nav>
+		<image id="logo">
+			
+		</image>
+		<a href="day">Day</a>
+		<a href="week">Week</a>
+		<a href="login">Log In</a>
+	</nav>
+
     {% block body %}
     {% endblock %}
+    <footer>
+    	<p>Authors: </p>
+    </footer>
 </body>
 </html>
