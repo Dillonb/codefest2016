@@ -1,0 +1,20 @@
+{% extends "eventsapp/base.html" %}
+
+{% block body %}
+
+{% if request.user.is_authenticated %}
+ You are logged in yay
+{% else %}
+You are not logged in yet
+{% endif %}
+
+{% if form.errors %}
+Form errors
+{% endif %}
+
+
+<div class="login">
+    <p> HI BRIAN </p>
+</div>
+
+{% endblock %}
