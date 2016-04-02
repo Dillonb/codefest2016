@@ -16,7 +16,7 @@
 <body>
 	<nav>
 		<image id="logo">
-			
+
 		</image>
 		<ul id="day_week_toggle">
 			<li><a href="/calendar/day">Day</a></li>
@@ -26,6 +26,8 @@
 					<li><a href="/calendar/list">Event List</a></li>
 				</ul>
 			</li>
+			<li><a href="/clubs/list">Clubs</a></li>
+			<li><a href="/clubs/submit">Create a club</a></li>
     <li><a href="/calendar/submit">Submit Event</a></li>
 		{% if request.user.is_authenticated %}
  			<li><a href="/accounts/logout">Logout</a></li>
