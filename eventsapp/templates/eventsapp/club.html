@@ -2,11 +2,11 @@
 
 {% block body %}
 
-<dl>
-<dt>Name</dt><dd>{{ club.name }}</dt>
+<h2>{{ club.name }}</h2>
+<ul>
 {% for event in club.events %}
-<p>{{ event.name }} {{ event.description }} {{ event.date_time }}</p>
+<li>{{ event.name }} {{ event.description }} {{ event.date_time }}</li>
 {% endfor %}
-</dl>
+</ul>
 
 {% endblock %}

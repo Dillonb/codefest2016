@@ -3,7 +3,7 @@
 {% block body %}
 {% for club in clubs %}
 <ul>
-<li>{{ club.name }}</li>
+<li><a href="/clubs/{{club.id}}">{{ club.name }}</a></li>
 </ul>
 {% endfor %}
 {% endblock %}
