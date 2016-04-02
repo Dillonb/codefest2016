@@ -4,6 +4,9 @@
 
 <dl>
 <dt>Name</dt><dd>{{ club.name }}</dt>
+{% for event in club.events %}
+<p>{{ event.name }} {{ event.description }} {{ event.date_time }}</p>
+{% endfor %}
 </dl>
 
 {% endblock %}
