@@ -91,3 +91,23 @@ def submit_event_view(request):
         e.save()
         return redirect("/calendar/list")
     return render(request, "eventsapp/submit.html", {"form": EventForm()})
+
+
+def tests_view(request):
+	# Insert events in two different dates to test day_view
+	# Day that should show up
+	e = Event()
+	e.description = "This should show up for today"
+	e.name = "This should show up"
+	e.user = request.user
+	e.date_time = datetime.datetime.now()
+	e.save()
+
+	# Day that should not show up
+	e1 = Event()
+	e1.description = "This should not show up for today"
+	e1.name = "This should not show up"
+	e1.user = request.user
+	e1.date_time = datetime.datetime.now() + datetime.timedelta(days=1)
+	e1.save()
+	return redirect("/")
