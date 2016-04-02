@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 def home_view(request):
     if request.user.is_authenticated():
-        return redirect("/calendar")
+        return render(request,"eventsapp/home.html")
     else:
         return redirect("/accounts/login")
 
