@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
+from eventsapp.models import *
+
 # Create your views here.
 
 def home_view(request):
