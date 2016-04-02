@@ -46,4 +46,23 @@ class Comment(models.Model):
 class Club(models.Model):
         users = models.ManyToManyField("UVMUser")
         name = models.CharField(max_length=100)
-        events = models.ForeignKey(Event)
+        events = models.ForeignKey("Event")
+
+class Event(models.Model):
+	"""A custom event model to represent events around UVM Campus"""
+	USER = "U"
+	CLUB = "C"
+	USER_TYPES = (
+		(USER, 'user'),
+		(CLUB, 'club')
+	)
+
+	name = models.CharField(max_length=40)
+	latitutde = models.FloatField()
+	longitube = models.FloatField()
+	user_type = models.CharField(max_length=1,choices=USER_TYPES)
+	date_time = models.DateTimeField()
+	description = models.CharField(max_length=255)
+
+
+	user = models.ForeignKey("UVMUser")
