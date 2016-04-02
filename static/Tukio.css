@@ -14,9 +14,9 @@
   #Tukio_base nav #week:hover {
     opacity: 1; }
   #Tukio_base nav #logo {
-    width: 300px;
-    margin-left: -40px;
-    margin-top: 100px; }
+    margin-top: 90px;
+    margin-left: 20px;
+    width: 150px; }
   #Tukio_base nav #logout {
     width: 180px;
     font-size: 20pt;
