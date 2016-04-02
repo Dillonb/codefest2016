@@ -1,7 +1,9 @@
-{% extends "eventsapp/base.html" %}
+<div id ="list_view">	
+	{% extends "eventsapp/base.html" %}
 
-{% block body %}
-{% for event in events %}
-<p>{{ event.name }} {{ event.description }} {{ event.date_time }}</p>
-{% endfor %}
-{% endblock %}
+	{% block body %}
+	{% for event in events %}
+	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }}</div></div>
+	{% endfor %}
+	{% endblock %}
+</div>
