@@ -2,8 +2,15 @@
 {% block body %}
 <div id="dayView" >
 	<title>Day Schedule</title>
-	{% for event in events_today %}
-	<h1>{{event.name}} {{event.description}}</h1>
-	{% endfor %}
+	<h1> Events Today </h1>
+	
+		{% for event in events %}
+			<span class="time"> {{ event.date_time }} </span>
+			<div class="{{event.user_type}}">
+				{{ event.user_type }}
+				<h3> {{ event.name }} </h3>
+				<p> {{ event.description }} </p>
+			</div>
+		{% endfor %}
 </div>
 {% endblock %}
