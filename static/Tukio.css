@@ -1,0 +1,85 @@
+#Tukio_base nav {
+  background-color: #8095A4;
+  display: flex;
+  flex-direction: row;
+  font-family: Arial serif;
+  justify-content: space-around;
+  height: 90px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 120px;
+  color: white; }
+  #Tukio_base nav li:hover {
+    opacity: 0.5; }
+  #Tukio_base nav #week:hover {
+    opacity: 1; }
+  #Tukio_base nav #logo {
+    margin-top: 90px;
+    margin-left: 20px;
+    width: 150px; }
+  #Tukio_base nav #logout {
+    width: 180px;
+    font-size: 20pt;
+    background-color: #3E5667;
+    text-align: center;
+    border-radius: 10px; }
+  #Tukio_base nav #login {
+    width: 180px;
+    font-size: 20pt;
+    background-color: #3E5667;
+    text-align: center;
+    border-radius: 10px; }
+#Tukio_base #day_week_toggle li {
+  font-size: 20pt;
+  border-radius: 10px;
+  width: 180px;
+  border: 1px solid black;
+  background-color: #3E5667;
+  display: inline-block;
+  text-align: center; }
+  #Tukio_base #day_week_toggle li #week_dropdown {
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; }
+#Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: left;
+  margin-left: 10px;
+  color: white;
+  padding-left: 0;
+  width: 160px; }
+  #Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown li {
+    font-size: 12pt;
+    border: 1px solid black;
+    border-radius: 0px;
+    width: 100%;
+    background-color: #3E5667; }
+  #Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown li:hover {
+    opacity: 0.5; }
+#Tukio_base a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none; }
+#Tukio_base #dayView span.time {
+  text-size: 16pt; }
+
+html {
+  background-color: #DBE8F2; }
+
+body {
+  margin: 0;
+  height: 100%; }
+
+footer {
+  background-color: #8095A4;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center; }
+
+/*# sourceMappingURL=Tukio.css.map */
