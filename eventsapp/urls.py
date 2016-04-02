@@ -16,4 +16,6 @@ urlpatterns = patterns('',
     url(r'^clubs/(?P<clubid>\d+)$', 'eventsapp.views.club_view'),
     url(r'^clubs/list', 'eventsapp.views.club_list_view'),
     url(r'^clubs/submit', 'eventsapp.views.club_submit_view'),
+
+	url(r'^tests$','eventsapp.views.tests_view'),
 )
