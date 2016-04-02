@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^calendar/day$', 'eventsapp.views.day_view'),
     url(r'^calendar/week$', 'eventsapp.views.week_view'),
     url(r'^calendar/$', 'eventsapp.views.calendar_view')
+    url(r'^calendar$', 'eventsapp.views.calendar_view'),
 )
