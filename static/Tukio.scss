@@ -10,6 +10,12 @@
 		width: 100%;
 		margin-bottom: 120px;
 		color: white;
+		li:hover{
+			opacity: 0.5;
+		}
+		#week:hover{
+			opacity: 1;
+		}
 		#logo {
 			width: 300px;
 			margin-left: -40px;
@@ -61,6 +67,9 @@
 				width:100%;
 				background-color:#3E5667;
 			}
+			li:hover{
+				opacity: 0.5;
+			}
 		}
 	}
 
@@ -90,8 +99,14 @@ body{
 footer{
 	background-color: #8095A4;
 	width: 100%;
-	position: absolute;
+	position: fixed;
     bottom: 0;
     left: 0;
     text-align: center;
 }
+
+
+#list_view{
+	
+}
+
