@@ -9,7 +9,7 @@ class EventForm(ModelForm):
     date = forms.DateTimeField(initial=datetime.datetime.now(), widget=forms.DateTimeInput())
     class Meta:
         model = Event
-        fields = ['description', 'name']
+        fields = ['name', 'description', 'date']
 
 class ClubForm(ModelForm):
     name = forms.CharField(required=True)
