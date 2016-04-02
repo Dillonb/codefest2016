@@ -54,4 +54,4 @@ class Event(models.Model):
 	description = models.CharField(max_length=255)
 
 
-	user = models.FoerignKey("UVMUser")
+	user = models.ForeignKey("UVMUser")
