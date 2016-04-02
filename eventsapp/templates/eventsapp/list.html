@@ -2,6 +2,6 @@
 
 {% block body %}
 {% for event in events %}
-<p>{{ event.name }} {{ event.description }}</p>
+<p>{{ event.name }} {{ event.description }} {{ event.date_time }}</p>
 {% endfor %}
 {% endblock %}
