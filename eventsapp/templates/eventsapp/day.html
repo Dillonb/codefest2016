@@ -7,9 +7,15 @@
 		{% for event in events_today %}
 			<span class="time"> {{ event.date_time }} </span>
 			<div class="{{event.user_type}}">
-				{{ event.user_type }}
+			
 				<h3> {{ event.name }} </h3>
 				<p> {{ event.description }} </p>
+				<p> {% if event.club %}
+						Sponsored by: {{ event.club }}
+					{% else %}
+						An individual: {{ event.user.full_name }}
+					{% endif %} 
+				</p>
 			</div>
 		{% endfor %}
 </div>

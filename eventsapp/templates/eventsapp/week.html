@@ -12,6 +12,12 @@
           <p class="name">{{ event.name }}</p>
 	  <p class="datetime">{{ event.date_time }}</p>
 	  <p class="description">{{ event.description }}</p>
+    <p class="sponsor"> {% if event.club %}
+                            Sponsored by: {{ event.club }}
+                        {% else %}
+                            An individual: {{ event.user.full_name }}
+                        {% endif %}  
+    </p>
 	</li>
         {% endfor %}
       </ul>

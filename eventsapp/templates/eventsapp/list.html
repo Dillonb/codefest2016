@@ -1,16 +1,16 @@
-{% extends "eventsapp/base.html" %}
-{% block body %}
-<div id="list_view" >
-	<title>Day Schedule</title>
-	<h1> Events Today </h1>
-	
-		{% for event in events %}
-			<span class="time"> {{ event.date_time }} </span>
-			<div class="{{event.user_type}}">
-				{{ event.user_type }}
-				<h3> {{ event.name }} </h3>
-				<p> {{ event.description }} </p>
-			</div>
-		{% endfor %}
+	{% extends "eventsapp/base.html" %}
+	{% block body %}
+<div id ="list_view">
+	{% for event in events %}
+	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }}</div> 
+
+		{% if event.club %}
+			Sponsored by: {{ event.club }}
+		{% else %}
+			An individual: {{ event.user.full_name }}
+		{% endif %}
+
+	</div>
+	{% endfor %}
 </div>
 {% endblock %}
