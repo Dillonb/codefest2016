@@ -25,6 +25,21 @@ def club_view(request, clubid):
     club = get_object_or_404(Club, id=clubid)
     return render(request, "eventsapp/club.html", {"club":club})
 
+@login_required
+def club_list_view(request):
+    return render(request, "eventsapp/club_list.html", {"clubs": Club.objects.all()})
+
+@login_required
+def club_submit_view(request):
+    form = ClubForm(data=request.POST)
+
+    if form.is_valid():
+        e = Club()
+        e.name = form.cleaned_data['name']
+        e.save()
+        return redirect("/clubs/list")
+    return render(request, "eventsapp/club_submit.html", {"form": form})
+
 def logout_view(request):
     pass
 

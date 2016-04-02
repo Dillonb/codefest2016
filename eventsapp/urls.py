@@ -13,5 +13,7 @@ urlpatterns = patterns('',
     url(r'^calendar/day$', 'eventsapp.views.day_view'),
     url(r'^calendar/week$', 'eventsapp.views.week_view'),
 
-    url(r'^club/(?P<clubid>\d+)$', 'eventsapp.views.club_view'),
+    url(r'^clubs/(?P<clubid>\d+)$', 'eventsapp.views.club_view'),
+    url(r'^clubs/list', 'eventsapp.views.club_list_view'),
+    url(r'^clubs/submit', 'eventsapp.views.club_submit_view'),
 )

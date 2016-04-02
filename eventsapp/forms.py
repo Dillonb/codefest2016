@@ -8,3 +8,9 @@ class EventForm(ModelForm):
     class Meta:
         model = Event
         fields = ['description', 'name']
+
+class ClubForm(ModelForm):
+    name = forms.CharField(required=True)
+    class Meta:
+        model = Club
+        fields = ['name']

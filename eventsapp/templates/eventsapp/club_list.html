@@ -1,0 +1,9 @@
+{% extends "eventsapp/base.html" %}
+
+{% block body %}
+{% for club in clubs %}
+<ul>
+<li>{{ club.name }}</li>
+</ul>
+{% endfor %}
+{% endblock %}
