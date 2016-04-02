@@ -1,27 +1,30 @@
 {% extends "eventsapp/base.html" %}
 {% block body %}
 <div id="weekView" >
-  <h2>Week Schedule</h2>
-  <ul class="days">
-    {% for day in days %}
-    <li class="day">
-      <p class="weekday">{{ day.day }}</p>
-      <ul class="events">
-        {% for event in day.events %}
-        <li class="event">
-          <p class="name">{{ event.name }}</p>
-	  <p class="datetime">{{ event.date_time }}</p>
-	  <p class="description">{{ event.description }}</p>
-    <p class="sponsor"> {% if event.club %}
+    <h2>Week Schedule</h2>
+    <ul class="days">
+        {% for day in days %}
+        <li class="day">
+            <p class="weekday">{{ day.day }}</p>
+            <ul class="events">
+                {% for event in day.events %}
+                <li class="event">
+                    <p class="datetime">{{ event.date_time.time }}</p>
+                    <div class="namedesc {% if event.club %}club{% else %}individual{% endif %}">
+                        <h3 class="name">{{ event.name }}</h3>
+                        <p class="description">{{ event.description }}</p>
+                        <p class="sponsor">
+                            {% if event.club %}
                             Sponsored by: <a href="/clubs/{{event.club.id}}">{{ event.club.name }}</a>
-                        {% else %}
-                            An individual: {{ event.user.full_name }}
-                        {% endif %}  
-    </p>
-	</li>
+                            {% else %}
+                            Submitted by: <a>{{ event.user.full_name }}</a>
+                            {% endif %}  
+                        </p>
+                    </div>
+	              </li>
+                {% endfor %}
+            </ul>
+        </li>
         {% endfor %}
-      </ul>
-    </li>
-    {% endfor %}
-  </ul>
-{% endblock %}
+    </ul>
+    {% endblock %}
