@@ -9,9 +9,9 @@ def home_view(request):
     else:
         return redirect("/accounts/login")
 
-#@login_required
-def account_view(request):
-    return render(request, "eventsapp/account.html")
+@login_required
+def profile_view(request):
+    return render(request, "eventsapp/profile.html")
 
 def logout_view(request):
     pass
