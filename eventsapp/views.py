@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 # Create your views here.
 
@@ -21,3 +22,8 @@ def logout_view(request):
 #@login_required
 def calendar_view(request):
 	return render(request, "eventsapp/calendar.html")
+
+
+def logout_view(request):
+    logout(request)
+    return redirect("/")
