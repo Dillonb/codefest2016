@@ -9,6 +9,10 @@
   width: 100%;
   margin-bottom: 120px;
   color: white; }
+  #Tukio_base nav li:hover {
+    opacity: 0.5; }
+  #Tukio_base nav #week:hover {
+    opacity: 1; }
   #Tukio_base nav #logo {
     width: 300px;
     margin-left: -40px;
@@ -52,6 +56,8 @@
     border-radius: 0px;
     width: 100%;
     background-color: #3E5667; }
+  #Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown li:hover {
+    opacity: 0.5; }
 #Tukio_base a {
   display: inline-block;
   width: 100%;
@@ -71,7 +77,7 @@ body {
 footer {
   background-color: #8095A4;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   text-align: center; }
