@@ -25,17 +25,18 @@
 				</ul>
 			</li>
 		</ul>
-		<!-- {% if request.user.is_authenticated %} -->
+    <a href="/calendar/submit">Submit Event</a></li>
+		{% if request.user.is_authenticated %}
  			<a id="logout" href="/accounts/logout">Logout</a>
-		<!-- {% else %} -->
+		{% else %}
 			<a id="login" href="/accounts/login">Login</a>
-		<!-- {% endif %} -->
+		{% endif %}
 	</nav>
 
     {% block body %}
     {% endblock %}
     <footer>
-    	<p>Authors: </p>
+    	<p>Authors: dillonb, doriummaldovar, brianmwaters, CollinGraf314, nhallpot</p>
     </footer>
 </body>
 </html>
