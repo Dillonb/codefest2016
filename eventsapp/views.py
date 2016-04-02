@@ -15,3 +15,7 @@ def profile_view(request):
 
 def logout_view(request):
     pass
+
+#@login_required
+def calendar_view(request):
+	return render(request, "eventsapp/calendar.html")
