@@ -2,7 +2,7 @@
 	{% block body %}
 <div id ="list_view">
 	{% for event in events %}
-	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }}</div> 
+	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }} {{event.location}}</div> 
 
 		{% if event.club %}
 			Sponsored by: <a href="/clubs/{{event.club.id}}">{{ event.club.name }}</a>
