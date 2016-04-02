@@ -106,7 +106,7 @@ def submit_event_view(request):
     #form.fields['club'].queryset = request.user.club_set.all()
     return render(request, "eventsapp/submit.html", {"form": form})
 
-
+@login_required
 def tests_view(request):
     # Insert events in two different dates to test day_view
     c1 = Club()
@@ -129,7 +129,7 @@ def tests_view(request):
     e.description = "Students will be able to make 'blessing bags' full of necessities for COTS Homeless Shelter during the week of Random Acts of Kindness on Wednesday, April 6th at 7:30 PM. FeelGood will also be at the event, giving away 70 of their famous sammies for FREE, including crowd favorite, the Bella!"
     e.name = "Sammie's Spread Smiles!"
     e.user = request.user
-    e.club = c2
+    # e.club = c2
     #April 6, 2016 7:30pm
     e.date_time = datetime.strptime("Apr 6 2016 7:30PM",'%b %d %Y %I:%M%p')
     e.save()
@@ -149,7 +149,7 @@ def tests_view(request):
     e2.description = "Getting excited for this summer's superhero movie blockbusters coming to the big scren?! So are we! Come join us for three movie nights in Brennan's Pub at 8:00PM on three 'Super Thursdays' throughout April. We will be screening the first movies of three of your favorite Marvel Superheros beginning with: IRONMAN on April 7th, THOR on April 14th, & CAPTAIN AMERICA on April 21st. Hope to see you all there! Presented by UVM After Dark"
     e2.name = "UVM After Dark: Super Thursdays"
     e2.user = request.user
-    e2.club = c2
+    # e2.club = c2
     #April 7, 2016 8:00pm
     e2.date_time = datetime.strptime("Apr 2 2016 8:00PM",'%b %d %Y %I:%M%p')
     e2.save()
