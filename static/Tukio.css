@@ -74,7 +74,8 @@ footer {
     position: relative;
     top: -40px;
     font-size: 18pt;
-    padding-right: 10px; }
+    padding-right: 10px;
+    width: 150px; }
   #weekView li div.namedesc {
     display: inline-block;
     width: 80%;
