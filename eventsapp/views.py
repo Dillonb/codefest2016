@@ -178,6 +178,7 @@ def tests_view(request):
     e5.user = request.user
     e5.club = c1
     e5.date_time = datetime.strptime("Apr 2 2016 7:00PM",'%b %d %Y %I:%M%p')
+    e5.location = "Boys and Girls Club, Old North End"
     e5.save()
 
     e6 = Event()

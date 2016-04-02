@@ -90,6 +90,9 @@ footer {
     #weekView li div.namedesc p.sponsor {
       text-align: right;
       margin-bottom: 0px; }
+    #weekView li div.namedesc p.location {
+      text-align: right;
+      margin-bottom: 0px; }
     #weekView li div.namedesc h3 {
       margin: 0px; }
   #weekView li div.namedesc.club {
