@@ -1,7 +1,6 @@
 {% extends "eventsapp/base.html" %}
 {% block body %}
 <div id="weekView" >
-    <h2>Week Schedule</h2>
     <ul class="days">
         {% for day in days %}
         <li class="day">
@@ -18,7 +17,7 @@
                             Sponsored by: <a href="/clubs/{{event.club.id}}">{{ event.club.name }}</a>
                             {% else %}
                             Submitted by: <a>{{ event.user.full_name }}</a>
-                            {% endif %}  
+                            {% endif %}
                         </p>
                     </div>
 	              </li>
