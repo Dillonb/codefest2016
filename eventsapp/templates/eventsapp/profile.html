@@ -1,0 +1,11 @@
+{% extends "eventsapp/base.html" %}
+
+{% block body %}
+
+<dl>
+<dt>Name</dt><dd>{{ user.full_name }}</dt>
+<dt>Year</dt><dd>{{ user.department }}</dt>
+<dt>Email</dt><dd>{{ user.uvm_email }}</dt>
+</dl>
+
+{% endblock %}
