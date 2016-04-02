@@ -96,19 +96,28 @@ def submit_event_view(request):
 
 def tests_view(request):
 	# Insert events in two different dates to test day_view
-	# Day that should show up
+	# Event that should show up for day/week view
 	e = Event()
 	e.description = "This should show up for today"
-	e.name = "This should show up"
+	e.name = "This should show up for today"
 	e.user = request.user
 	e.date_time = datetime.datetime.now()
 	e.save()
 
-	# Day that should not show up
+	# Event that should not show up for day view
 	e1 = Event()
 	e1.description = "This should not show up for today"
-	e1.name = "This should not show up"
+	e1.name = "This should not show up for today"
 	e1.user = request.user
 	e1.date_time = datetime.datetime.now() + datetime.timedelta(days=1)
 	e1.save()
+
+	# Event that should not show up for this week
+	e2 = Event()
+	e2.description = "This should not show up for this week"
+	e2.name = "This should not show up for this week"
+	e2.user = request.user
+	e2.date_time = datetime.datetime.now() + datetime.timedelta(days=20)
+	e2.save()
+
 	return redirect("/")
