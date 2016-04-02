@@ -47,12 +47,12 @@ def calendar_view(request):
     return render(request, "eventsapp/calendar.html")
 
 def day_view(request):
-    today = datetime.datetime.now().date()
-    return render(request, "eventsapp/day.html", {
-        "events": Event.objects.filter(date_time__year=today.year, 
-            date_time__month=today.month, 
-            date_time__day=today.day)
-        })
+	# Find todays date
+	today = datetime.datetime.now().date()
+	
+	events_today = Event.objects.filter(date_time__day = today.day)
+
+	return render(request, "eventsapp/day.html", {"events_today":events_today})
 
 def week_view(request):
     today = datetime.datetime.now().date()
