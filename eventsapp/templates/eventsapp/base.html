@@ -11,6 +11,8 @@
 <title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href="{% static "Tukio.css" %}">
 <script src="{% static "Tukio.js" %}"></script>
+<script src="{% static "jquery-2.2.2.min.js"%}"></script>
+<script src="{% static "customJquery.js"%}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <!-- - See more at: http://www.digital-lifestyle.com/2014/03/embedding-google-maps-with-traffic.html#sthash.Y1qIFrVr.dpuf -->
 </head>
@@ -25,6 +27,8 @@
 					<li><a href="/calendar/list">Event List</a></li>
 				</ul>
 			</li>
+			<li><a href="/clubs/list">Clubs</a></li>
+			<li><a href="/clubs/submit">Create a club</a></li>
     <li><a href="/calendar/submit">Submit Event</a></li>
 		{% if request.user.is_authenticated %}
  			<li><a id="logout" href="/accounts/logout">Logout</a></li>

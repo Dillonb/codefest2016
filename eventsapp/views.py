@@ -23,7 +23,8 @@ def profile_view(request):
 @login_required
 def club_view(request, clubid):
     club = get_object_or_404(Club, id=clubid)
-    return render(request, "eventsapp/club.html", {"club":club})
+    print(club.event_set.all())
+    return render(request, "eventsapp/club.html", {"club":club, "events": club.event_set.all()})
 
 @login_required
 def club_list_view(request):
@@ -34,9 +35,10 @@ def club_submit_view(request):
     form = ClubForm(data=request.POST)
 
     if form.is_valid():
-        e = Club()
-        e.name = form.cleaned_data['name']
-        e.save()
+        club = Club()
+        club.name = form.cleaned_data['name']
+        club.creator = request.user
+        club.save()
         return redirect("/clubs/list")
     return render(request, "eventsapp/club_submit.html", {"form": form})
 
@@ -49,8 +51,10 @@ def calendar_view(request):
 def day_view(request):
 	# Find todays date
 	today = datetime.datetime.now().date()
-	
-	events_today = Event.objects.filter(date_time__day = today.day)
+
+	events_today = Event.objects.filter(date_time__day = today.day,
+                                        date_time__month = today.month,
+                                        date_time__year = today.year)
 
 	return render(request, "eventsapp/day.html", {"events_today":events_today})
 
@@ -81,16 +85,26 @@ def calendar_list_view(request):
 @login_required
 def submit_event_view(request):
     form = EventForm(data=request.POST)
+    #form.fields['club'].queryset = request.user.club_set.all()
 
     if form.is_valid():
         e = Event()
         e.description = form.cleaned_data['description']
         e.name = form.cleaned_data['name']
-        e.user = request.user
         e.date_time = form.cleaned_data['date']
-        e.user_type = 'U'
+        print("AAAAAAA")
+        if form.cleaned_data['club']:
+            print("You submitted this under a club")
+            e.club = form.cleaned_data['club']
+            e.user_type = 'C'
+        else:
+            print(form.cleaned_data)
+            e.user_type = 'U'
+            e.user = request.user
         e.save()
         return redirect("/calendar/list")
+    form = EventForm()
+    form.fields['club'].queryset = request.user.club_set.all()
     return render(request, "eventsapp/submit.html", {"form": EventForm()})
 
 

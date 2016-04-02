@@ -1,14 +1,21 @@
 {% extends "eventsapp/base.html" %}
 {% block body %}
 <div id="weekView" >
-	<title>Week Schedule</title>
-  {% for day in days %}
-      <div>{{ day.day }}</div>
-      <ul>
+  <h2>Week Schedule</h2>
+  <ul class="days">
+    {% for day in days %}
+    <li class="day">
+      <p class="weekday">{{ day.day }}</p>
+      <ul class="events">
         {% for event in day.events %}
-           <li>{{ event.name }} {{ event.description }}</li>
+        <li class="event">
+          <p class="name">{{ event.name }}</p>
+	  <p class="datetime">{{ event.date_time }}</p>
+	  <p class="description">{{ event.description }}</p>
+	</li>
         {% endfor %}
       </ul>
-  {% endfor %}
-</div>
+    </li>
+    {% endfor %}
+  </ul>
 {% endblock %}
