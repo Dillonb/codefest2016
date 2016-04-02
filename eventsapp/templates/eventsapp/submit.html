@@ -1,9 +1,10 @@
 {% extends "eventsapp/base.html" %}
-
+ 
 {% block body %}
 <form method="post">
   {% csrf_token %}
-  
+  <input type="radio" id="individual_event_button" name="event_creator_type" value="user_event" checked="checked"> Create event under your name: </br>  
+  <input type="radio" id="club_event_button" name="event_creator_type" value="club_event"> Create event under a club you created: </br>  
   {{ form.as_p }}
 
   <input type="submit" value="Submit" />
