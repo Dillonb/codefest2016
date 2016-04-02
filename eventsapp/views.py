@@ -90,10 +90,13 @@ def submit_event_view(request):
         e = Event()
         e.description = form.cleaned_data['description']
         e.name = form.cleaned_data['name']
-        e.user = request.user
         e.date_time = form.cleaned_data['date']
-        e.club = form.cleaned_data['club']
-        e.user_type = 'U'
+        if form.cleaned_data['club']:
+            e.club = form.cleaned_data['club']
+            e.user_type = 'C'
+        else:
+            e.user_type = 'U'
+            e.user = request.user
         e.save()
         return redirect("/calendar/list")
     form = EventForm()
