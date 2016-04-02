@@ -124,19 +124,19 @@ def tests_view(request):
     c3.creator=request.user
     c3.save()
 
-    # 
+    #
     e = Event()
-    e.description = "Students will be able to make “blessing bags” full of necessities for COTS Homeless Shelter during the week of Random Acts of Kindness on Wednesday, April 6th at 7:30 PM. FeelGood will also be at the event, giving away 70 of their famous sammies for FREE, including crowd favorite, the Bella!"
-    e.name = "Sammie’s Spread Smiles!"
+    e.description = "Students will be able to make 'blessing bags' full of necessities for COTS Homeless Shelter during the week of Random Acts of Kindness on Wednesday, April 6th at 7:30 PM. FeelGood will also be at the event, giving away 70 of their famous sammies for FREE, including crowd favorite, the Bella!"
+    e.name = "Sammie's Spread Smiles!"
     e.user = request.user
     e.club = c2
     #April 6, 2016 7:30pm
     e.date_time = datetime.strptime("Apr 6 2016 7:30PM",'%b %d %Y %I:%M%p')
     e.save()
 
-    # Event that should 
+    # Event that should
     e1 = Event()
-    e1.description = "Join other Catamounts from around campus at Brennan’s Pub for an evening of trivia and prizes. Form a team, compete, and win yourselves some cool swag! And don’t miss out on the food specials – $1.00 French Fries and $3.00 Milkshakes. P.S. Wicked Wednesday Pub Quiz happens in Brennan’s EVERY Wednesday throughout the semester! Come back each week for trivia, prizes & food specials! Please contact the UVM Program Board (UPB) atupb@uvm.edu for questions and accommodations."
+    e1.description = "Join other Catamounts from around campus at Brennan's Pub for an evening of trivia and prizes. Form a team, compete, and win yourselves some cool swag! And don't miss out on the food specials - $1.00 French Fries and $3.00 Milkshakes. P.S. Wicked Wednesday Pub Quiz happens in Brennan's EVERY Wednesday throughout the semester! Come back each week for trivia, prizes & food specials! Please contact the UVM Program Board (UPB) atupb@uvm.edu for questions and accommodations."
     e1.name = "Wicked Wednesday Pub Quiz"
     e1.club =  c2
     e1.user = request.user
@@ -146,7 +146,7 @@ def tests_view(request):
 
     # Event that should not show up for this week
     e2 = Event()
-    e2.description = "Getting excited for this summer’s superhero movie blockbusters coming to the big scren?! So are we! Come join us for three movie nights in Brennan’s Pub at 8:00PM on three “Super Thursdays” throughout April. We will be screening the first movies of three of your favorite Marvel Superheros beginning with: IRONMAN on April 7th, THOR on April 14th, & CAPTAIN AMERICA on April 21st. Hope to see you all there! Presented by UVM After Dark"
+    e2.description = "Getting excited for this summer's superhero movie blockbusters coming to the big scren?! So are we! Come join us for three movie nights in Brennan's Pub at 8:00PM on three 'Super Thursdays' throughout April. We will be screening the first movies of three of your favorite Marvel Superheros beginning with: IRONMAN on April 7th, THOR on April 14th, & CAPTAIN AMERICA on April 21st. Hope to see you all there! Presented by UVM After Dark"
     e2.name = "UVM After Dark: Super Thursdays"
     e2.user = request.user
     e2.club = c2
