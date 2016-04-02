@@ -44,8 +44,8 @@ class Comment(models.Model):
     time = models.DateTimeField(auto_now=True)
 
 class Club(models.Model):
-        users = models.ManyToManyField("UVMUser")
-        name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    creator = models.ForeignKey("UVMUser", null=True)
 
 class Event(models.Model):
 	"""A custom event model to represent events around UVM Campus"""

@@ -34,9 +34,10 @@ def club_submit_view(request):
     form = ClubForm(data=request.POST)
 
     if form.is_valid():
-        e = Club()
-        e.name = form.cleaned_data['name']
-        e.save()
+        club = Club()
+        club.name = form.cleaned_data['name']
+        club.creator = request.user
+        club.save()
         return redirect("/clubs/list")
     return render(request, "eventsapp/club_submit.html", {"form": form})
 
@@ -49,7 +50,7 @@ def calendar_view(request):
 def day_view(request):
 	# Find todays date
 	today = datetime.datetime.now().date()
-	
+
 	events_today = Event.objects.filter(date_time__day = today.day)
 
 	return render(request, "eventsapp/day.html", {"events_today":events_today})
