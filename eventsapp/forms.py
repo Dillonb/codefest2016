@@ -16,4 +16,3 @@ class ClubForm(ModelForm):
     class Meta:
         model = Club
         fields = ['name']
-        fields = ['name', 'description', 'date']
