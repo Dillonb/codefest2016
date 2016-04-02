@@ -5,6 +5,7 @@ from eventsapp.models import *
 class EventForm(ModelForm):
     name = forms.CharField(required=True)
     description = forms.CharField(required=True)
+    date = forms.DateTimeField(widget=forms.DateTimeInput())
     class Meta:
         model = Event
-        fields = ['description', 'name']
+        fields = ['name', 'description', 'date']
