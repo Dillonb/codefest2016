@@ -1,7 +1,7 @@
 {% extends "eventsapp/base.html" %}
 
 {% block body %}
-<h1>Clubs</h1>
+<h1 class="club-title">Clubs</h1>
 {% for club in clubs %}
 <ul class="club_list">
     <li><a href="/clubs/{{club.id}}">{{ club.name }}</a></li>

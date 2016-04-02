@@ -95,6 +95,9 @@ footer {
   #weekView li div.namedesc.individual {
     background-color: #2DCF38; }
 
+h1.clubs-title {
+  margin-left: 10px; }
+
 ul.club_list {
   list-style-type: none; }
   ul.club_list li a {

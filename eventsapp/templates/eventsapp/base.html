@@ -24,9 +24,9 @@
 			<li><a href="/calendar/week">This Week</a>
 			</li>
 			<li><a href="/clubs/list">Clubs</a></li>
+      {% if request.user.is_authenticated %}
 			<li><a href="/clubs/submit">Create a club</a></li>
-    <li><a href="/calendar/submit">Submit Event</a></li>
-		{% if request.user.is_authenticated %}
+      <li><a href="/calendar/submit">Submit Event</a></li>
  			<li><a id="logout" href="/accounts/logout">Logout</a></li>
 		{% else %}
 			<li><a id="login" href="/accounts/login">Login</a></li>
