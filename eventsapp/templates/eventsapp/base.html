@@ -26,13 +26,13 @@
 					<li><a href="/calendar/list">Event List</a></li>
 				</ul>
 			</li>
-		</ul>
-    <a href="/calendar/submit">Submit Event</a></li>
+    <li><a href="/calendar/submit">Submit Event</a></li>
 		{% if request.user.is_authenticated %}
- 			<a href="/accounts/logout">Logout</a>
+ 			<li><a href="/accounts/logout">Logout</a></li>
 		{% else %}
-			<a href="/accounts/login">Login</a>
+			<li><a href="/accounts/login">Login</a></li>
 		{% endif %}
+		</ul>
 	</nav>
 
     {% block body %}

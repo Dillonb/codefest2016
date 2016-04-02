@@ -2,6 +2,13 @@
 {% block body %}
 <div id="weekView" >
 	<title>Week Schedule</title>
-	<h1> HI DILLON </h1>
+  {% for day in days %}
+      <div>{{ day.day }}</div>
+      <ul>
+        {% for event in day.events %}
+           <li>{{ event.name }} {{ event.description }}</li>
+        {% endfor %}
+      </ul>
+  {% endfor %}
 </div>
 {% endblock %}
