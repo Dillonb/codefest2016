@@ -84,6 +84,7 @@ def calendar_list_view(request):
 @login_required
 def submit_event_view(request):
     form = EventForm(data=request.POST)
+    form.fields['club'].queryset = request.user.club_set.all()
 
     if form.is_valid():
         e = Event()
@@ -91,9 +92,12 @@ def submit_event_view(request):
         e.name = form.cleaned_data['name']
         e.user = request.user
         e.date_time = form.cleaned_data['date']
+        e.club = form.cleaned_data['club']
         e.user_type = 'U'
         e.save()
         return redirect("/calendar/list")
+    form = EventForm()
+    form.fields['club'].queryset = request.user.club_set.all()
     return render(request, "eventsapp/submit.html", {"form": EventForm()})
 
 

@@ -46,22 +46,23 @@ class Comment(models.Model):
 class Club(models.Model):
     name = models.CharField(max_length=100)
     creator = models.ForeignKey("UVMUser", null=True)
+    def __str__(self):
+        return self.name
 
 class Event(models.Model):
-	"""A custom event model to represent events around UVM Campus"""
-	USER = "U"
-	CLUB = "C"
-	USER_TYPES = (
-		(USER, 'user'),
-		(CLUB, 'club')
-	)
+    """A custom event model to represent events around UVM Campus"""
+    USER = "U"
+    CLUB = "C"
+    USER_TYPES = (
+            (USER, 'user'),
+            (CLUB, 'club')
+    )
 
-	name = models.CharField(max_length=40)
-	latitutde = models.FloatField(null=True)
-	longitube = models.FloatField(null=True)
-	user_type = models.CharField(max_length=1,choices=USER_TYPES)
-	date_time = models.DateTimeField(null=True)
-	description = models.CharField(max_length=255)
-
-
-	user = models.ForeignKey("UVMUser")
+    name = models.CharField(max_length=40)
+    latitutde = models.FloatField(null=True)
+    longitube = models.FloatField(null=True)
+    user_type = models.CharField(max_length=1,choices=USER_TYPES)
+    date_time = models.DateTimeField(null=True)
+    description = models.CharField(max_length=255)
+    club = models.ForeignKey("Club")
+    user = models.ForeignKey("UVMUser", null=True)
