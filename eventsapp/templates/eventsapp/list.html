@@ -3,7 +3,15 @@
 	{% block body %}
 <div id ="list_view">
 	{% for event in events %}
-	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }}</div></div>
+	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }}</div> 
+
+		{% if event.club %}
+			Sponsored by: {{ event.club }}
+		{% else %}
+			An individual: {{ event.user.full_name }}
+		{% endif %}
+
+	</div>
 	{% endfor %}
 </div>
 	{% endblock %}
