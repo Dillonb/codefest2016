@@ -8,16 +8,14 @@
 <meta http-equiv="X-Frame-Options" content="allow">
 
 <title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" type="text/scss" href="Tukio.css">
+<link rel="stylesheet" type="text/css" href="Tukio.css">
 <script src="Tukio.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <!-- - See more at: http://www.digital-lifestyle.com/2014/03/embedding-google-maps-with-traffic.html#sthash.Y1qIFrVr.dpuf -->
 </head>
 <body>
 	<nav>
-		<image id="logo">
-			
-		</image>
+		<img src="http://pre15.deviantart.net/8efe/th/pre/i/2016/093/c/e/tiger_image_final_by_jcarlson247-d9xk0de.png" alt="Logo" id="logo">
 		<ul id="day_week_toggle">
 			<li><a href="/calendar/day">Day</a></li>
 			<li> Week
@@ -27,11 +25,11 @@
 				</ul>
 			</li>
 		</ul>
-		{% if request.user.is_authenticated %}
- 			<a id="login" href="/accounts/logout">Logout</a>
-		{% else %}
+		<!-- {% if request.user.is_authenticated %} -->
+ 			<a id="logout" href="/accounts/logout">Logout</a>
+		<!-- {% else %} -->
 			<a id="login" href="/accounts/login">Login</a>
-		{% endif %}
+		<!-- {% endif %} -->
 	</nav>
 
     {% block body %}
