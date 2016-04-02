@@ -1,0 +1,66 @@
+#Tukio_base {
+	nav {
+		background-image: url("");
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		height: 100px;
+		align-items: center;
+	}
+	#day_week_toggle li {
+		font-size: 20pt;
+		width: 200px;
+		background-color: #03B9B9; 
+		display: inline-block;
+		text-align: center;
+		margin-left: 0;
+		margin-right: 0;
+		#week_dropdown {
+			display:none;
+			min-width: 50px;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    		z-index: 1;
+		}
+	}
+	#day_week_toggle li:first-child {
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	#day_week_toggle li:nth-child(2) {
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	#day_week_toggle li:nth-child(2):hover {
+		#week_dropdown{
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			justify-content: left;
+			margin-left: 0;
+			padding-left: 0;
+			width: 190px;
+			li {
+				border: 1px solid black;
+				border-radius: 0px;
+				width:100%;
+				background-color:#78E2E2;
+			}
+		}
+	}
+
+	nav #login{
+		width: 180px;
+		font-size: 20pt;
+		border-radius: 10px;
+		background-color: #03B9B9; 
+		text-align: center;
+	}
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+#list_view {
+}
