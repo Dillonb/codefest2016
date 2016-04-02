@@ -52,11 +52,11 @@ def day_view(request):
 	# Find todays date
 	today = datetime.datetime.now().date()
 
-	events_today = Event.objects.filter(date_time__day = today.day,
+	events = Event.objects.filter(date_time__day = today.day,
                                         date_time__month = today.month,
                                         date_time__year = today.year)
 
-	return render(request, "eventsapp/day.html", {"events_today":events_today})
+	return render(request, "eventsapp/day.html", {"events":events})
 
 def week_view(request):
     today = datetime.datetime.now().date()
