@@ -23,7 +23,7 @@ def profile_view(request):
 @login_required
 def club_view(request, clubid):
     club = get_object_or_404(Club, id=clubid)
-    return render(request, "eventsapp/club.html", {"club":club})
+    return render(request, "eventsapp/club.html", {"club":club, "events": club.event_set.all().order_by("time")})
 
 @login_required
 def club_list_view(request):
