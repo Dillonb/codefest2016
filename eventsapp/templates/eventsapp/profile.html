@@ -2,6 +2,10 @@
 
 {% block body %}
 
-<p>Your name is {{ user.first_name }} and you have an account.
+<dl>
+<dt>Name</dt><dd>{{ user.full_name }}</dt>
+<dt>Year</dt><dd>{{ user.department }}</dt>
+<dt>Email</dt><dd>{{ user.uvm_email }}</dt>
+</dl>
 
 {% endblock %}
