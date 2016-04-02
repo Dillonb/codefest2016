@@ -57,10 +57,10 @@ class Event(models.Model):
 	)
 
 	name = models.CharField(max_length=40)
-	latitutde = models.FloatField()
-	longitube = models.FloatField()
+	latitutde = models.FloatField(null=True)
+	longitube = models.FloatField(null=True)
 	user_type = models.CharField(max_length=1,choices=USER_TYPES)
-	date_time = models.DateTimeField()
+	date_time = models.DateTimeField(null=True)
 	description = models.CharField(max_length=255)
 
 
