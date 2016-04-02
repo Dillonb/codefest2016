@@ -112,4 +112,13 @@ ul.club_list {
   margin: auto;
   text-align: right; }
 
+#clubsView {
+  margin-left: 40px;
+  padding-top: 15px; }
+  #clubsView li {
+    margin-right: 50px;
+    background-color: #2DCF38;
+    border-radius: 5px;
+    padding: 1em; }
+
 /*# sourceMappingURL=Tukio.css.map */
