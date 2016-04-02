@@ -1,0 +1,7 @@
+{% extends "eventsapp/base.html" %}
+
+{% block body %}
+{% for event in events %}
+<p>{{ event.name }} {{ event.description }}</p>
+{% endfor %}
+{% endblock %}
