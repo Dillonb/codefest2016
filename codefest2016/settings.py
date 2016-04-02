@@ -86,6 +86,11 @@ DATABASES = {
     }
 }
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,"static"),
+)
+
+
 AUTH_USER_MODEL = "eventsapp.UVMUser"
 
 AUTH_LDAP_SERVER_URI = "ldap://ldap.uvm.edu"
