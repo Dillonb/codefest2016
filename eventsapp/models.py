@@ -36,3 +36,9 @@ class UVMUser(AbstractBaseUser):
 
     USERNAME_FIELD = 'netid'
     objects = UVMUserManager()
+
+class Comment(models.Model):
+    user = models.ForeignKey("UVMUser")
+    event = models.ForeignKey("Event")
+    content = models.TextField()
+    time = models.DateTimeField(auto_now=True)
