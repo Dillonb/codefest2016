@@ -25,7 +25,6 @@ def account_view(request):
 def logout_view(request):
     pass
 
-@login_required
 def calendar_view(request):
 	return render(request, "eventsapp/calendar.html")
 
@@ -39,7 +38,6 @@ def logout_view(request):
     logout(request)
     return redirect("/")
 
-@login_required
 def calendar_list_view(request):
     return render(request, "eventsapp/list.html", {
         "events": Event.objects.all()
