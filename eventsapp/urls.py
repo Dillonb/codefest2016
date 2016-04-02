@@ -6,5 +6,4 @@ urlpatterns = patterns('',
     url(r'^$', 'eventsapp.views.home_view'),
     url(r'^accounts/profile/$', 'eventsapp.views.profile_view'),
     url(r'^calendar$', 'eventsapp.views.calendar_view'),
-    url(r'^account$', 'eventsapp.views.account_view')
 )
