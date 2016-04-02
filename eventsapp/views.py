@@ -11,7 +11,9 @@ def home_view(request):
 
 @login_required
 def profile_view(request):
-    return render(request, "eventsapp/profile.html")
+    user = request.user
+
+    return render(request, "eventsapp/profile.html", {"user": user})
 
 def logout_view(request):
     pass
