@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import ldap
+ldap.set_option(ldap.OPT_X_TLS_REQUIRE_CERT, ldap.OPT_X_TLS_ALLOW)
 from django_auth_ldap.config import LDAPSearch, GroupOfNamesType
 
 
@@ -93,7 +94,7 @@ AUTH_LDAP_SERVER_URI = "ldap://ldap.uvm.edu"
 AUTH_LDAP_USER_DN_TEMPLATE = "uid=%(user)s,ou=People,dc=uvm,dc=edu"
 AUTH_LDAP_START_TLS = True
 
-AUTH_LDAP_BIND_DN = ""
+#AUTH_LDAP_BIND_DN = ""
 AUTH_LDAP_BIND_PASSWORD = ""
 
 AUTH_LDAP_USER_ATTR_MAP = {
