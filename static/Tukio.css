@@ -104,4 +104,10 @@ ul.club_list {
     color: black;
     font-size: 18pt; }
 
+.login {
+  width: 300px;
+  display: block;
+  margin: auto;
+  text-align: right; }
+
 /*# sourceMappingURL=Tukio.css.map */
