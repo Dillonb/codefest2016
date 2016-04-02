@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from eventsapp.models import *
 from eventsapp.forms import *
+import datetime
 
 # Create your views here.
 
@@ -26,13 +27,18 @@ def logout_view(request):
     pass
 
 def calendar_view(request):
-	return render(request, "eventsapp/calendar.html")
+    return render(request, "eventsapp/calendar.html")
 
 def day_view(request):
-	return render(request, "eventsapp/day.html")
+    today = datetime.datetime.now().date()
+    return render(request, "eventsapp/day.html", {
+        "events": Event.objects.filter(date_time__year=today.year, 
+            date_time__month=today.month, 
+            date_time__day=today.day)
+        })
 
 def week_view(request):
-	return render(request, "eventsapp/week.html")
+    return render(request, "eventsapp/week.html")
 
 def logout_view(request):
     logout(request)
