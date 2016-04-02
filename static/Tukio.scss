@@ -1,37 +1,41 @@
 #Tukio_base {
 	nav {
-		background-image: url("");
+		background-color: #8095A4;
 		display: flex;
 		flex-direction: row;
+		font-family: Arial serif;
 		justify-content: space-around;
-		height: 100px;
-		margin-top: 50px;
+		height: 90px;
 		align-items: center;
+		width: 100%;
+		margin-bottom: 120px;
+		color: white;
 		#logo {
 			width: 300px;
-			margin-left: -30px;
+			margin-left: -40px;
+			margin-top: 100px;
 		}
 		#logout{
 			width: 180px;
 			font-size: 20pt;
-			border-top-left-radius: 10px;
-			border-bottom-left-radius: 10px;
-			background-color: #03B9B9; 
+			background-color: #3E5667; 
 			text-align: center;
+			border-radius: 10px;
 		}
 		#login{
 			width: 180px;
 			font-size: 20pt;	
-			border-top-right-radius: 10px;
-			border-bottom-right-radius: 10px;
-			background-color: #03B9B9; 
+			background-color: #3E5667; 
 			text-align: center;
+			border-radius: 10px;
 		}
 	}
 	#day_week_toggle li {
 		font-size: 20pt;
+		border-radius: 10px;
 		width: 180px;
-		background-color: #03B9B9; 
+		border: 1px solid black;
+		background-color: #3E5667; 
 		display: inline-block;
 		text-align: center;
 		#week_dropdown {
@@ -40,34 +44,31 @@
     		z-index: 1;
 		}
 	}
-	#day_week_toggle li:first-child {
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
-	}
-	#day_week_toggle li:nth-child(2) {
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
-	}
 	#day_week_toggle li:nth-child(2):hover {
 		#week_dropdown{
 			display: flex;
 			flex-direction: column;
 			position: absolute;
 			justify-content: left;
-			margin-left: 0;
+			margin-left: 10px;
+			color: white;
 			padding-left: 0;
-			width: 170px;
+			width: 160px;
 			li {
+				font-size: 12pt;
 				border: 1px solid black;
 				border-radius: 0px;
 				width:100%;
-				background-color:#78E2E2;
+				background-color:#3E5667;
 			}
 		}
 	}
 
 	a {
-		color: black;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		color: white;
 		text-decoration: none;
 	}
   
@@ -77,4 +78,19 @@
 	}
 }
 
+}
+html {
+	background-color: #DBE8F2;
+}
+body{
+	margin:0;
+	height: 100%;
+}
+footer{
+	background-color: #8095A4;
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
 }
