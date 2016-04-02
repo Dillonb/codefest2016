@@ -42,3 +42,8 @@ class Comment(models.Model):
     event = models.ForeignKey("Event")
     content = models.TextField()
     time = models.DateTimeField(auto_now=True)
+
+class Club(models.Model):
+        users = models.ManyToManyField("UVMUser")
+        name = models.CharField(max_length=100)
+        events = models.ForeignKey(Event)
