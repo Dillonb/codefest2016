@@ -16,9 +16,6 @@
 		li:hover{
 			opacity: 0.5;
 		}
-		#week:hover{
-			opacity: 1;
-		}
 		#logo {
       margin-top:90px;
       margin-left: 20px;
@@ -47,33 +44,6 @@
 		background-color: #3E5667;
 		display: inline-block;
 		text-align: center;
-		#week_dropdown {
-			display:none;
-    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    		z-index: 1;
-		}
-	}
-	#day_week_toggle li:nth-child(2):hover {
-		#week_dropdown{
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			justify-content: left;
-			margin-left: 10px;
-			color: white;
-			padding-left: 0;
-			width: 160px;
-			li {
-				font-size: 12pt;
-				border: 1px solid black;
-				border-radius: 0px;
-				width:100%;
-				background-color:#3E5667;
-			}
-			li:hover{
-				opacity: 0.5;
-			}
-		}
 	}
 
 	a {
@@ -162,4 +132,14 @@ footer{
         //font-size: 18pt;
     }
 
+}
+
+ul.club_list {
+    list-style-type: none;
+    li {
+        a {
+            color: black;
+            font-size: 18pt;
+        }
+    }
 }
