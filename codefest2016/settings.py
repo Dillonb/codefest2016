@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import ldap
+from django_auth_ldap.config import LDAPSearch, GroupOfNamesType
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -81,6 +84,38 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+AUTH_USER_MODEL = "eventsapp.UVMUser"
+
+AUTH_LDAP_SERVER_URI = "ldap://ldap.uvm.edu"
+#AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=People,dc=uvm,dc=edu",
+    #ldap.SCOPE_SUBTREE, "(uid=%user)s")
+AUTH_LDAP_USER_DN_TEMPLATE = "uid=%(user)s,ou=People,dc=uvm,dc=edu"
+AUTH_LDAP_START_TLS = True
+
+AUTH_LDAP_BIND_DN = ""
+AUTH_LDAP_BIND_PASSWORD = ""
+
+AUTH_LDAP_USER_ATTR_MAP = {
+    "first_name": "givenName",
+    "last_name": "sn",
+    "uvm_email": "mail",
+    "full_name": "gecos",
+    "department": "ou",
+    "netid": "uid"
+}
+
+#AUTH_LDAP_DENY_GROUP = "eduPersonAffiliation=Faculty"
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'django_auth_ldap.backend.LDAPBackend',
+)
+
+import logging
+logger = logging.getLogger("django_auth_ldap")
+logger.addHandler(logging.StreamHandler())
+logger.setLevel(logging.DEBUG)
 
 
 # Password validation
