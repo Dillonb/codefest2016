@@ -60,7 +60,7 @@ def day_view(request):
 
 def week_view(request):
     today = datetime.datetime.now().date()
-    dates = [today + datetime.timedelta(days=i) for i in range(0 - today.weekday(), 7 - today.weekday())]
+    dates = [today + datetime.timedelta(days=i) for i in range(0, 7)]
     days = []
 
     for day in dates:
