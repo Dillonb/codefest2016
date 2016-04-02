@@ -51,6 +51,7 @@ class Event(models.Model):
 	longitube = models.FloatField()
 	user_type = models.CharField(max_length=1,choices=USER_TYPES)
 	date_time = models.DateTimeField()
+	description = models.CharField(max_length=255)
 
 
 	user = models.FoerignKey("UVMUser")
