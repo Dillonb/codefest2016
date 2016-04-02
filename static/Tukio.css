@@ -14,8 +14,9 @@
   #Tukio_base nav li:hover {
     opacity: 0.5; }
   #Tukio_base nav #logo {
-    margin-top: 90px;
-    margin-left: 20px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
     width: 150px; }
   #Tukio_base nav #logout {
     width: 180px;
