@@ -13,7 +13,7 @@
 	  <p class="datetime">{{ event.date_time }}</p>
 	  <p class="description">{{ event.description }}</p>
     <p class="sponsor"> {% if event.club %}
-                            Sponsored by: {{ event.club }}
+                            Sponsored by: <a href="/clubs/{{event.club.id}}">{{ event.club.name }}</a>
                         {% else %}
                             An individual: {{ event.user.full_name }}
                         {% endif %}  

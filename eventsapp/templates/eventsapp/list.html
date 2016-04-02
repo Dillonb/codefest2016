@@ -5,7 +5,7 @@
 	<div><span>{{ event.date_time }}</span><div>{{ event.name }} {{ event.description }}</div> 
 
 		{% if event.club %}
-			Sponsored by: {{ event.club }}
+			Sponsored by: <a href="/clubs/{{event.club.id}}">{{ event.club.name }}</a>
 		{% else %}
 			An individual: {{ event.user.full_name }}
 		{% endif %}

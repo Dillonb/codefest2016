@@ -8,7 +8,7 @@
     <div class="date-time">{{ event.date_time }}</span>
     <div class="description">{{ event.description }}</div>
     {% if event.club %}
-    <div class="sponsor">{{ event.club }}</div>
+    <div class="sponsor"><a href="/clubs/{{event.club.id}}">{{ event.club }}</a></div>
     {% else %}
     <div class="sponsor">{{ event.user.full_name }}</div>
     {% endif %}
