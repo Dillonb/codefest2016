@@ -130,6 +130,7 @@ def tests_view(request):
     e.description = "Students will be able to make 'blessing bags' full of necessities for COTS Homeless Shelter during the week of Random Acts of Kindness on Wednesday, April 6th at 7:30 PM. FeelGood will also be at the event, giving away 70 of their famous sammies for FREE, including crowd favorite, the Bella!"
     e.name = "Sammie's Spread Smiles!"
     e.user = request.user
+    e.location = "Davis Center"
     # e.club = c2
     #April 6, 2016 7:30pm
     e.date_time = datetime.strptime("Apr 6 2016 7:30PM",'%b %d %Y %I:%M%p')
@@ -141,6 +142,7 @@ def tests_view(request):
     e1.name = "Wicked Wednesday Pub Quiz"
     e1.club =  c2
     e1.user = request.user
+    e1.location = "Davis Center"
     #April 6, 2016 9:00pm
     e1.date_time = datetime.strptime("Apr 6 2016 9:00PM",'%b %d %Y %I:%M%p')
     e1.save()
@@ -150,6 +152,7 @@ def tests_view(request):
     e2.description = "Getting excited for this summer's superhero movie blockbusters coming to the big scren?! So are we! Come join us for three movie nights in Brennan's Pub at 8:00PM on three 'Super Thursdays' throughout April. We will be screening the first movies of three of your favorite Marvel Superheros beginning with: IRONMAN on April 7th, THOR on April 14th, & CAPTAIN AMERICA on April 21st. Hope to see you all there! Presented by UVM After Dark"
     e2.name = "UVM After Dark: Super Thursdays"
     e2.user = request.user
+    e2.location = "UVM Green"
     # e2.club = c2
     #April 7, 2016 8:00pm
     e2.date_time = datetime.strptime("Apr 2 2016 8:00PM",'%b %d %Y %I:%M%p')
@@ -159,6 +162,7 @@ def tests_view(request):
     e3.description = "In this series, we ask UVM faculty & staff to think deeply about what matters to them, and provide a forum for them to lecture on a topic of their choosing, as if it were their last time to do so. The content of these lectures can vary, ranging from emotional to entertaining, but the underlying question is the same: What wisdom would you try to impart to the world if you knew it was your last chance?"
     e3.name = "UPB Presents: Last Lecture"
     e3.user = request.user
+    e3.location = "Williams Hall"
     e3.club = c2
     #April 13, 2016 7:00pm
     e3.date_time = datetime.strptime("Apr 8 2016 7:00PM",'%b %d %Y %I:%M%p')
@@ -168,6 +172,7 @@ def tests_view(request):
     e4.description = "Meet at the gym for some b-ball"
     e4.name = "Pick up BasketBall game"
     e4.user = request.user
+    e4.location = "Patrick Gym"
     #April 3, 12:00pm
     e4.date_time = datetime.strptime("Apr 13 2016 12:00PM",'%b %d %Y %I:%M%p')
     e4.save()
@@ -177,6 +182,7 @@ def tests_view(request):
     e5.name = "Sigma Phi Philanthropy Event"
     e5.user = request.user
     e5.club = c1
+    e5.location = "420 College Street"
     e5.date_time = datetime.strptime("Apr 2 2016 7:00PM",'%b %d %Y %I:%M%p')
     e5.location = "Boys and Girls Club, Old North End"
     e5.save()
@@ -185,7 +191,8 @@ def tests_view(request):
     e6.description = "Come to CS Crew and Code a project"
     e6.user = request.user
     e6.name = "CS Crew Project Night"
-    e6.club = c3;
+    e6.club = c3
+    e6.location = "Votey 332"
     e6.date_time = datetime.strptime("Apr 6 2016 6:30PM",'%b %d %Y %I:%M%p')
     e6.save()
 
