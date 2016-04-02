@@ -1,5 +1,8 @@
 #Tukio_base {
 	nav {
+    a {
+        color: white;
+    }
 		background-color: #8095A4;
 		display: flex;
 		flex-direction: row;
@@ -13,13 +16,10 @@
 		li:hover{
 			opacity: 0.5;
 		}
-		#week:hover{
-			opacity: 1;
-		}
 		#logo {
-			width: 300px;
-			margin-left: -40px;
-			margin-top: 100px;
+      margin-top:90px;
+      margin-left: 20px;
+			width: 150px;
 		}
 		#logout{
 			width: 180px;
@@ -44,40 +44,12 @@
 		background-color: #3E5667;
 		display: inline-block;
 		text-align: center;
-		#week_dropdown {
-			display:none;
-    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    		z-index: 1;
-		}
-	}
-	#day_week_toggle li:nth-child(2):hover {
-		#week_dropdown{
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			justify-content: left;
-			margin-left: 10px;
-			color: white;
-			padding-left: 0;
-			width: 160px;
-			li {
-				font-size: 12pt;
-				border: 1px solid black;
-				border-radius: 0px;
-				width:100%;
-				background-color:#3E5667;
-			}
-			li:hover{
-				opacity: 0.5;
-			}
-		}
 	}
 
 	a {
 		display: inline-block;
 		width: 100%;
 		height: 100%;
-		color: white;
 		text-decoration: none;
 	}
 
@@ -106,7 +78,72 @@ footer{
 }
 
 
-#list_view{
-	
+#list_view {
+
+}
+
+#weekView {
+    ul {
+        list-style-type: none;
+    }
+    p.weekday {
+        font-size: 25pt;
+        font-weight: bold;
+    }
+    li {
+        display: block;
+        p, div, h3 {
+            display: inline-block;
+        }
+        p.datetime {
+            position:relative;
+            top:-40px;
+            font-size: 18pt;
+            padding-right: 10px;
+        }
+        div.namedesc {
+            p {
+                display: block;
+                margin-left: 40px;
+                font-size: 15pt;
+            }
+            p.sponsor {
+                text-align: right;
+                margin-bottom: 0px;
+            }
+            h3 {
+                margin: 0px;
+            }
+            display: inline-block;
+            width: 80%;
+            background-color: grey;
+            border-radius: 5px;
+            padding: 1em;
+            margin-bottom: 5px;
+        }
+        div.namedesc.club {
+            background-color: #00A492;
+        }
+        div.namedesc.individual {
+            background-color: #2DCF38;
+        }
+    }
+    li.day {
+        //font-size: 18pt;
+    }
+
+}
+
+h1.clubs-title {
+    margin-left: 10px;
+}
+ul.club_list {
+    list-style-type: none;
+    li {
+        a {
+            color: black;
+            font-size: 18pt;
+        }
+    }
 }
 

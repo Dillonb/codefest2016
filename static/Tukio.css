@@ -9,14 +9,14 @@
   width: 100%;
   margin-bottom: 120px;
   color: white; }
+  #Tukio_base nav a {
+    color: white; }
   #Tukio_base nav li:hover {
     opacity: 0.5; }
-  #Tukio_base nav #week:hover {
-    opacity: 1; }
   #Tukio_base nav #logo {
-    width: 300px;
-    margin-left: -40px;
-    margin-top: 100px; }
+    margin-top: 90px;
+    margin-left: 20px;
+    width: 150px; }
   #Tukio_base nav #logout {
     width: 180px;
     font-size: 20pt;
@@ -37,32 +37,10 @@
   background-color: #3E5667;
   display: inline-block;
   text-align: center; }
-  #Tukio_base #day_week_toggle li #week_dropdown {
-    display: none;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1; }
-#Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  justify-content: left;
-  margin-left: 10px;
-  color: white;
-  padding-left: 0;
-  width: 160px; }
-  #Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown li {
-    font-size: 12pt;
-    border: 1px solid black;
-    border-radius: 0px;
-    width: 100%;
-    background-color: #3E5667; }
-  #Tukio_base #day_week_toggle li:nth-child(2):hover #week_dropdown li:hover {
-    opacity: 0.5; }
 #Tukio_base a {
   display: inline-block;
   width: 100%;
   height: 100%;
-  color: white;
   text-decoration: none; }
 #Tukio_base #dayView span.time {
   text-size: 16pt; }
@@ -81,5 +59,49 @@ footer {
   bottom: 0;
   left: 0;
   text-align: center; }
+
+#weekView ul {
+  list-style-type: none; }
+#weekView p.weekday {
+  font-size: 25pt;
+  font-weight: bold; }
+#weekView li {
+  display: block; }
+  #weekView li p, #weekView li div, #weekView li h3 {
+    display: inline-block; }
+  #weekView li p.datetime {
+    position: relative;
+    top: -40px;
+    font-size: 18pt;
+    padding-right: 10px; }
+  #weekView li div.namedesc {
+    display: inline-block;
+    width: 80%;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 5px; }
+    #weekView li div.namedesc p {
+      display: block;
+      margin-left: 40px;
+      font-size: 15pt; }
+    #weekView li div.namedesc p.sponsor {
+      text-align: right;
+      margin-bottom: 0px; }
+    #weekView li div.namedesc h3 {
+      margin: 0px; }
+  #weekView li div.namedesc.club {
+    background-color: #00A492; }
+  #weekView li div.namedesc.individual {
+    background-color: #2DCF38; }
+
+h1.clubs-title {
+  margin-left: 10px; }
+
+ul.club_list {
+  list-style-type: none; }
+  ul.club_list li a {
+    color: black;
+    font-size: 18pt; }
 
 /*# sourceMappingURL=Tukio.css.map */
